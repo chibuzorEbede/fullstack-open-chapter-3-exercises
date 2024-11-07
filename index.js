@@ -1,6 +1,7 @@
 const express = require('express')
 const utils = require('./utils')
 const  morgan = require('morgan')
+const cors = require('cors')
 
 //setup the persons array
 let persons = [
@@ -33,6 +34,12 @@ let persons = [
 
 //initialize app
 const app = express()
+
+//add static files
+app.use(express.static('frontend'))
+
+//use cors
+app.use(cors())
 
 //add json parser middleware
 app.use(express.json())
@@ -121,7 +128,7 @@ app.get('/info', (request, response) => {
 
 
 //set port
-const PORT = 3001
+const PORT = process.env.PORT || 3001  
 
 //start the server and connect to the port
 app.listen(PORT, () => {
