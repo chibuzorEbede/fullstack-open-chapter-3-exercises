@@ -6,11 +6,11 @@ GET http://localhost:3001/info
 
 ###
 
-GET http://localhost:3001/api/persons/2
+GET http://localhost:3001/api/persons/675f4b5180df3a2a6aa74c7c
 
 ###
 
-DELETE http://localhost:3001/api/persons/771708
+DELETE http://localhost:3001/api/persons/679c1535e70d22fa77d78f68
 
 ###
 
@@ -18,10 +18,16 @@ POST http://localhost:3001/api/persons
 Content-Type: application/json
 
 {
-    "name": "Bruce Willis",
-    "number": "0809912345"
+    "name": "alexander chips",
+    "number": "7823109845"
 }
 
 ###
 
-GET http://localhost:3001/api/persons
+PUT http://localhost:3001/api/persons/alexander chips
+Content-Type: application/json
+
+{
+    "name": "alexander chips",
+    "number": "11111111111"
+}
