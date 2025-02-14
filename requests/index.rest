@@ -10,7 +10,7 @@ GET http://localhost:3001/api/persons/675f4b5180df3a2a6aa74c7c
 
 ###
 
-DELETE http://localhost:3001/api/persons/679c1535e70d22fa77d78f68
+DELETE http://localhost:3001/api/persons/67af84325bac36adcee9bd13
 
 ###
 
@@ -18,13 +18,13 @@ POST http://localhost:3001/api/persons
 Content-Type: application/json
 
 {
-    "name": "alexander chips",
-    "number": "7823109845"
+    "name": "gr",
+    "number": "12-456712"
 }
 
 ###
 
-PUT http://localhost:3001/api/persons/alexander chips
+PUT http://localhost:3001/api/persons/gr
 Content-Type: application/json
 
 {

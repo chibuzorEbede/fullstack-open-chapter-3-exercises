@@ -29,10 +29,15 @@ app.use(morgan(" :method :url :status - :response-time ms :postData "));
 //create error handling middleware
 const errorHandler = (error, request, response, next) => {
   console.error(error);
-  if (error.name) {
+  if (error.name === "CastError") {
     console.log(`the error's name is ${error.name}`);
-    return response.json({ error: error });
+    return response.status(401).json({ error: error });
+  } else if (error.name === "ValidationError") {
+    return response.status(400).json({ error: error });
+  } else {
+    return response.status(500).json({ error: error });
   }
+
   next(error);
 };
 
